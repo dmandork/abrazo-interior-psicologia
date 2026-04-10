@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Abrazo Interior Psicología - Terapia cognitivo conductual humanista en La Paz, Bolivia. Psicóloga Ivy Victoria Monje Riera.">
   <meta name="keywords" content="psicóloga La Paz, terapia psicológica La Paz, psicóloga Bolivia, terapia cognitivo conductual, Ivy Monje, Abrazo Interior Psicología">
-  
+
   <!-- Full Favicon Package -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -32,6 +32,7 @@
       color: white;
       padding: 8px 16px;
       z-index: 9999;
+      text-decoration: none;
       border-radius: 0 0 6px 6px;
       transition: top 0.3s;
     }
@@ -46,8 +47,24 @@
 
   <a href="#main-content" class="skip-link">Ir al contenido principal</a>
 
-  <!-- Navbar, Hero, Sobre mí, Servicios, Quick Contacto sections stay exactly the same as before -->
-  <!-- (I kept them identical so you can just copy-paste the whole file) -->
+  <!-- Navbar -->
+  <nav class="bg-white border-b sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+      <a href="#inicio" class="flex items-center">
+        <img src="logo.jpg" alt="Ivy Victoria Monje Riera - Licenciada en Psicología" class="h-12 w-auto">
+      </a>
+      <div class="hidden md:flex gap-8 text-lg">
+        <a href="#inicio" class="hover:text-emerald-600 transition">Inicio</a>
+        <a href="#sobre" class="hover:text-emerald-600 transition">Sobre mí</a>
+        <a href="#servicios" class="hover:text-emerald-600 transition">Servicios</a>
+        <a href="#contacto" class="hover:text-emerald-600 transition">Contacto</a>
+      </div>
+      <a href="https://wa.me/59177268060" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-2xl flex items-center gap-2 font-medium transition">
+        <i class="fab fa-whatsapp text-xl"></i>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </nav>
 
   <!-- Hero -->
   <section id="inicio" class="max-w-6xl mx-auto px-6 pt-16 pb-20">
@@ -78,9 +95,86 @@
     </div>
   </section>
 
-  <!-- Sobre mí, Servicios, Quick Contacto sections are unchanged – omitted here for brevity but they are identical to previous version -->
+  <!-- Sobre mí -->
+  <section id="sobre" class="bg-emerald-50 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-7">
+          <h2 class="heading text-4xl font-bold">Hola, soy Ivy Monje</h2>
+          <p class="mt-6 text-lg leading-relaxed">
+            Psicóloga de profesión de la Universidad Católica Boliviana San Pablo con enfoque cognitivo conductual humanista. 
+            Me especializo en psicología organizacional, recursos humanos y psicología educativa. 
+            Acompaño a personas e instituciones en procesos de sanación, crecimiento y transformación interior.
+          </p>
+          <p class="mt-6 text-lg leading-relaxed">
+            Mi práctica se basa en el respeto profundo por cada historia y en la convicción de que un abrazo interior 
+            es el primer paso para sanar y florecer.
+          </p>
+        </div>
+        <div class="md:col-span-5">
+          <img src="ivy-monje.jpeg" alt="Foto profesional de Ivy Monje, psicóloga en La Paz" class="w-full rounded-3xl shadow-2xl">
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Contact Form (now points to custom success page) -->
+  <!-- Servicios -->
+  <section id="servicios" class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="heading text-4xl font-bold text-center mb-12">Servicios</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold">Terapia Individual</h3>
+        <p class="mt-3 text-gray-600">Para ansiedad, depresión, autoestima y crecimiento personal.</p>
+      </div>
+      <div class="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold">Terapia de Pareja</h3>
+        <p class="mt-3 text-gray-600">Mejorar la comunicación y fortalecer la conexión emocional.</p>
+      </div>
+      <div class="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold">Adolescentes</h3>
+        <p class="mt-3 text-gray-600">Acompañamiento en esta etapa de cambios y descubrimiento.</p>
+      </div>
+      <div class="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold">Orientación Vocacional</h3>
+        <p class="mt-3 text-gray-600">Descubre tu propósito profesional con claridad y confianza.</p>
+      </div>
+      <div class="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold">Psicología Organizacional</h3>
+        <p class="mt-3 text-gray-600">Bienestar laboral, liderazgo y desarrollo de equipos.</p>
+      </div>
+      <div class="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold">Psicología Educativa</h3>
+        <p class="mt-3 text-gray-600">Apoyo a estudiantes, padres y docentes.</p>
+      </div>
+    </div>
+    <p class="text-center mt-12 text-gray-500">Los precios se definen según cada caso.<br>¡Escríbeme por WhatsApp o usa el formulario!</p>
+  </section>
+
+  <!-- Quick Contacto (WhatsApp) -->
+  <section id="contacto" class="bg-emerald-700 text-white py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="heading text-4xl font-bold">¿Lista para tu abrazo interior?</h2>
+      <p class="mt-6 text-xl max-w-md mx-auto">Contáctame por WhatsApp o correo. Te responderé en menos de 24 horas.</p>
+      
+      <div class="mt-12 flex flex-col md:flex-row gap-8 justify-center items-center">
+        <a href="https://wa.me/59177268060?text=Hola%20Ivy%2C%20quiero%20agendar%20una%20cita" target="_blank"
+           class="bg-white text-emerald-700 hover:bg-emerald-100 w-full md:w-auto px-12 py-6 rounded-3xl text-2xl flex items-center justify-center gap-4 font-medium">
+          <i class="fab fa-whatsapp text-4xl"></i>
+          +591 77268060
+        </a>
+        
+        <div class="text-left">
+          <p class="flex items-center gap-3 text-xl"><i class="fas fa-envelope"></i> ivymonje.psicologia@gmail.com</p>
+          <div class="mt-6 flex gap-6 justify-center md:justify-start">
+            <a href="https://instagram.com/abrazointeriorpsicologia" target="_blank" class="text-3xl hover:text-emerald-200">📸</a>
+            <a href="https://www.facebook.com/share/18T7Ue83Zb/" target="_blank" class="text-3xl hover:text-emerald-200">📘</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
   <section id="formulario" class="max-w-6xl mx-auto px-6 py-20 bg-white">
     <div class="max-w-2xl mx-auto">
       <h2 class="heading text-4xl font-bold text-center mb-8">Envíame un mensaje</h2>
@@ -136,7 +230,17 @@
     </div>
   </section>
 
-  <!-- Footer and Floating WhatsApp (unchanged) -->
-  <!-- ... (same as previous version) -->
+  <!-- Footer -->
+  <footer class="bg-white py-10 border-t text-center text-gray-500 text-sm">
+    <p>© 2026 Abrazo Interior Psicología • La Paz, Bolivia</p>
+    <p class="mt-2">Ivy Victoria Monje Riera • Licenciada en Psicología</p>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/59177268060" target="_blank"
+     class="fixed bottom-8 right-8 bg-emerald-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl text-4xl hover:scale-110 transition z-50">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
 </body>
 </html>
