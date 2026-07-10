@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="qA-KWI5fXP6zZbJ7ScLik5Wl7gIOOhx03bBxJTlG30M" />
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7DW367Z3H8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7DW367Z3H8');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Abrazo Interior Psicología - Terapia cognitivo conductual humanista en La Paz, Bolivia. Psicóloga Ivy Victoria Monje Riera.">
   <meta name="keywords" content="psicóloga La Paz, terapia psicológica La Paz, psicóloga Bolivia, terapia cognitivo conductual, Ivy Monje, Abrazo Interior Psicología">
-
+  <!-- Full Favicon Package -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#10b981">
   <title>Abrazo Interior Psicología | Ivy Monje - Terapia en La Paz, Bolivia</title>
-  
-  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
-    
-    body { 
-      font-family: 'Inter', system-ui, sans-serif; 
-    }
-    .heading { 
-      font-family: 'Playfair Display', sans-serif; 
-    }
-    
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .heading { font-family: 'Playfair Display', sans-serif; }
     .skip-link {
       position: absolute;
       top: -40px;
@@ -40,278 +42,190 @@
       transition: top 0.3s;
       font-weight: 600;
     }
-    .skip-link:focus { 
-      top: 0; 
+    .skip-link:focus { top: 0; }
+    input:focus, textarea:focus, select:focus, button:focus, a:focus {
+      outline: 4px solid #10b981;
+      outline-offset: 3px;
     }
-
-    .lang-switch {
+    .lang-btn {
       transition: all 0.2s ease;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
     }
-    .lang-switch.active {
+    .lang-btn.active {
       background-color: #065f46;
       color: white;
-      font-weight: 600;
-    }
-
-    .lang-es, .lang-en {
-      transition: opacity 0.2s ease;
-    }
-    .lang-en {
-      display: none;
-    }
-
-    .service-card {
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    }
-
-    input:focus, textarea:focus, select:focus {
-      outline: none;
-      border-color: #059669;
-      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
     }
   </style>
 </head>
 <body class="bg-white text-gray-800">
 
-  <!-- Skip to content link -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Ir al contenido principal</a>
 
   <!-- Navbar -->
   <nav class="bg-white border-b sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-      <!-- Logo -->
       <a href="#inicio" class="flex items-center">
-        <img src="logo.jpg" alt="Abrazo Interior Psicología Logo" class="h-12 w-auto">
+        <img src="logo.jpg" alt="Ivy Victoria Monje Riera - Licenciada en Psicología" width="192" height="48" class="h-12 w-auto">
       </a>
 
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center gap-8 text-lg">
-        <a href="#inicio" class="hover:text-emerald-600 transition lang-es">Inicio</a>
-        <a href="#inicio" class="hover:text-emerald-600 transition lang-en" style="display: none;">Home</a>
-        
-        <a href="#sobre" class="hover:text-emerald-600 transition lang-es">Sobre mí</a>
-        <a href="#sobre" class="hover:text-emerald-600 transition lang-en" style="display: none;">About me</a>
-        
-        <a href="#servicios" class="hover:text-emerald-600 transition lang-es">Servicios</a>
-        <a href="#servicios" class="hover:text-emerald-600 transition lang-en" style="display: none;">Services</a>
-        
-        <a href="#contacto" class="hover:text-emerald-600 transition lang-es">Contacto</a>
-        <a href="#contacto" class="hover:text-emerald-600 transition lang-en" style="display: none;">Contact</a>
+      <div class="hidden md:flex gap-8 text-lg">
+        <a href="#inicio" class="hover:text-emerald-600 transition">Inicio</a>
+        <a href="#sobre" class="hover:text-emerald-600 transition">Sobre mí</a>
+        <a href="#servicios" class="hover:text-emerald-600 transition">Servicios</a>
+        <a href="#contacto" class="hover:text-emerald-600 transition">Contacto</a>
       </div>
 
-      <!-- Language Switcher + WhatsApp -->
-      <div class="flex items-center gap-4">
+      <!-- Language Toggle + WhatsApp -->
+      <div class="flex items-center gap-3">
         <!-- Language Switcher -->
-        <div class="flex items-center bg-gray-100 rounded-full p-1 text-sm font-medium">
-          <button onclick="switchLang('es')" id="lang-es-btn"
-                  class="lang-switch px-3 py-1 rounded-full active">ES</button>
-          <button onclick="switchLang('en')" id="lang-en-btn"
-                  class="lang-switch px-3 py-1 rounded-full">EN</button>
+        <div class="flex items-center bg-gray-100 rounded-full p-1 text-sm">
+          <button onclick="switchLanguage('es')" id="btn-es"
+                  class="lang-btn active px-3 py-1">ES</button>
+          <button onclick="switchLanguage('en')" id="btn-en"
+                  class="lang-btn px-3 py-1">EN</button>
         </div>
 
-        <!-- WhatsApp Button (Desktop) -->
-        <a href="https://wa.me/59177268060?text=Hola%20Ivy%2C%20quiero%20agendar%20una%20cita" 
-           target="_blank"
-           class="hidden md:flex bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-2xl items-center gap-2 text-sm font-medium transition">
+        <a href="https://wa.me/59177268060" target="_blank"
+           class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-2xl flex items-center gap-2 text-sm font-medium transition">
           <i class="fab fa-whatsapp text-lg"></i>
-          <span class="lang-es">WhatsApp</span>
-          <span class="lang-en" style="display: none;">WhatsApp</span>
+          <span>WhatsApp</span>
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section id="inicio" class="max-w-6xl mx-auto px-6 pt-16 pb-20">
     <div id="main-content" class="grid md:grid-cols-2 gap-12 items-center">
-      
-      <!-- Text Content -->
       <div>
-        <p class="text-emerald-600 font-medium tracking-[3px] text-sm md:text-base">LA PAZ • BOLIVIA</p>
-        
-        <!-- Spanish Hero -->
-        <div class="lang-es">
-          <h1 class="heading text-5xl md:text-6xl font-bold leading-[1.1] text-gray-900 mt-3">
-            Abrazo Interior<br>Psicología
-          </h1>
-          <p class="text-2xl text-gray-600 mt-6">Terapia cognitivo conductual humanista</p>
-          <p class="text-xl text-gray-600 mt-2">Conéctate contigo, con tus relaciones y con tu propósito.</p>
-        </div>
+        <p class="text-emerald-600 font-medium tracking-widest text-center md:text-left">LA PAZ • BOLIVIA</p>
+        <h1 class="heading text-5xl md:text-6xl font-bold leading-tight text-gray-900 mt-3 text-center md:text-left"
+            data-i18n="hero_title">
+          Abrazo Interior<br>Psicología
+        </h1>
+        <p class="text-2xl text-gray-600 mt-6 text-center md:text-left" data-i18n="hero_subtitle">
+          Terapia cognitivo conductual humanista
+        </p>
+        <p class="text-xl text-gray-600 mt-2 text-center md:text-left" data-i18n="hero_tagline">
+          Conéctate contigo, con tus relaciones y con tu propósito.
+        </p>
 
-        <!-- English Hero -->
-        <div class="lang-en" style="display: none;">
-          <h1 class="heading text-5xl md:text-6xl font-bold leading-[1.1] text-gray-900 mt-3">
-            Abrazo Interior<br>Psychology
-          </h1>
-          <p class="text-2xl text-gray-600 mt-6">Humanistic Cognitive Behavioral Therapy</p>
-          <p class="text-xl text-gray-600 mt-2">Connect with yourself, with your relationships, and with your purpose.</p>
-        </div>
-
-        <div class="mt-10 flex flex-wrap gap-4">
-          <!-- Spanish buttons -->
-          <a href="https://wa.me/59177268060?text=Hola%20Ivy%2C%20quiero%20agendar%20una%20cita" 
+        <div class="mt-10 flex flex-wrap gap-4 justify-center md:justify-start">
+          <a href="https://wa.me/59177268060?text=Hola%20Ivy%2C%20quiero%20agendar%20una%20cita"
              target="_blank"
-             class="lang-es bg-emerald-600 hover:bg-emerald-700 text-white text-lg md:text-xl px-8 py-4 rounded-3xl flex items-center justify-center gap-3 font-medium transition shadow-lg hover:shadow-xl">
-            <i class="fab fa-whatsapp text-2xl"></i>
-            <span>Agenda tu cita por WhatsApp</span>
+             class="bg-emerald-600 hover:bg-emerald-700 text-white text-xl px-10 py-5 rounded-3xl flex items-center gap-3 font-medium transition">
+            <i class="fab fa-whatsapp text-3xl"></i>
+            <span data-i18n="hero_cta_whatsapp">Agenda tu cita por WhatsApp</span>
           </a>
-          <button onclick="document.getElementById('formulario').scrollIntoView({ behavior: 'smooth' })" 
-                  class="lang-es border-2 border-emerald-600 hover:bg-emerald-50 text-emerald-700 text-lg md:text-xl px-8 py-4 rounded-3xl font-medium transition">
+          <button onclick="document.getElementById('formulario').scrollIntoView({ behavior: 'smooth' })"
+                  class="border border-emerald-600 hover:bg-emerald-50 text-emerald-700 text-xl px-10 py-5 rounded-3xl font-medium transition flex items-center gap-3"
+                  data-i18n="hero_cta_form">
             Enviar mensaje
-          </button>
-
-          <!-- English buttons -->
-          <a href="https://wa.me/59177268060?text=Hello%20Ivy%2C%20I%20would%20like%20to%20schedule%20an%20appointment" 
-             target="_blank"
-             class="lang-en bg-emerald-600 hover:bg-emerald-700 text-white text-lg md:text-xl px-8 py-4 rounded-3xl flex items-center justify-center gap-3 font-medium transition shadow-lg hover:shadow-xl" style="display: none;">
-            <i class="fab fa-whatsapp text-2xl"></i>
-            <span>Schedule via WhatsApp</span>
-          </a>
-          <button onclick="document.getElementById('formulario').scrollIntoView({ behavior: 'smooth' })" 
-                  class="lang-en border-2 border-emerald-600 hover:bg-emerald-50 text-emerald-700 text-lg md:text-xl px-8 py-4 rounded-3xl font-medium transition" style="display: none;">
-            Send message
           </button>
         </div>
       </div>
 
-      <!-- Hero Image / Logo area -->
       <div class="flex justify-center md:justify-end">
-        <div class="relative">
-          <img src="logo.jpg" alt="Abrazo Interior Psicología - Logo" class="w-full max-w-[420px] rounded-3xl shadow-2xl">
-        </div>
+        <img src="logo.jpg" alt="Ivy Victoria Monje Riera - Licenciada en Psicología"
+             width="480" height="320" class="w-full max-w-md rounded-3xl shadow-2xl">
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- Sobre mí -->
   <section id="sobre" class="bg-emerald-50 py-20">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-12 gap-12 items-center">
-        
-        <!-- Text -->
         <div class="md:col-span-7">
-          <!-- Spanish About -->
-          <div class="lang-es">
-            <h2 class="heading text-4xl font-bold text-gray-900">Hola, soy Ivy Monje</h2>
-            <div class="mt-6 text-lg leading-relaxed text-gray-700 space-y-4">
-              <p>Psicóloga de profesión de la Universidad Católica Boliviana San Pablo con enfoque cognitivo conductual humanista. Me especializo en psicología organizacional, recursos humanos y psicología educativa. Acompaño a personas e instituciones en procesos de sanación, crecimiento y transformación interior.</p>
-              <p>Mi práctica se basa en el respeto profundo por cada historia y en la convicción de que un abrazo interior es el primer paso para sanar y florecer.</p>
-            </div>
-          </div>
+          <h2 class="heading text-4xl font-bold" data-i18n="about_title">Hola, soy Ivy Monje</h2>
 
-          <!-- English About -->
-          <div class="lang-en" style="display: none;">
-            <h2 class="heading text-4xl font-bold text-gray-900">Hello, I'm Ivy Monje</h2>
-            <div class="mt-6 text-lg leading-relaxed text-gray-700 space-y-4">
-              <p>I am a psychologist by profession from Universidad Católica Boliviana San Pablo with a humanistic cognitive-behavioral approach. I specialize in organizational psychology, human resources, and educational psychology. I accompany individuals and institutions in processes of healing, growth, and inner transformation.</p>
-              <p>My practice is based on deep respect for each person's unique story and the conviction that an inner embrace is the first step to heal and flourish.</p>
-            </div>
-          </div>
+          <p class="mt-6 text-lg leading-relaxed" data-i18n="about_p1">
+            Psicóloga de profesión de la Universidad Católica Boliviana San Pablo con enfoque cognitivo conductual humanista.
+            Me especializo en psicología organizacional, recursos humanos y psicología educativa.
+            Acompaño a personas e instituciones en procesos de sanación, crecimiento y transformación interior.
+          </p>
+          <p class="mt-6 text-lg leading-relaxed" data-i18n="about_p2">
+            Mi práctica se basa en el respeto profundo por cada historia y en la convicción de que un abrazo interior
+            es el primer paso para sanar y florecer.
+          </p>
         </div>
-
-        <!-- Photo -->
         <div class="md:col-span-5">
-          <img src="ivy-monje.jpeg" alt="Ivy Monje - Psicóloga en La Paz" 
-               class="w-full max-w-md mx-auto md:mx-0 rounded-3xl shadow-2xl object-cover">
+          <img src="ivy-monje.jpeg" alt="Foto profesional de Ivy Monje, psicóloga en La Paz"
+               width="600" height="800" loading="lazy" class="w-full rounded-3xl shadow-2xl">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Servicios -->
   <section id="servicios" class="max-w-6xl mx-auto px-6 py-20">
-    <h2 class="heading text-4xl font-bold text-center mb-12 lang-es">Servicios</h2>
-    <h2 class="heading text-4xl font-bold text-center mb-12 lang-en" style="display: none;">Services</h2>
+    <h2 class="heading text-4xl font-bold text-center mb-12" data-i18n="services_title">Servicios</h2>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <!-- Service 1 -->
-      <div class="service-card bg-white border border-gray-100 rounded-3xl p-8">
-        <h3 class="text-2xl font-semibold lang-es">Terapia Individual</h3>
-        <h3 class="text-2xl font-semibold lang-en" style="display: none;">Individual Therapy</h3>
-        <p class="mt-3 text-gray-600 lang-es">Para ansiedad, depresión, autoestima y crecimiento personal.</p>
-        <p class="mt-3 text-gray-600 lang-en" style="display: none;">For anxiety, depression, self-esteem, and personal growth.</p>
+
+      <div class="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold" data-i18n="service_1_title">Terapia Individual</h3>
+        <p class="mt-3 text-gray-600" data-i18n="service_1_desc">Para ansiedad, depresión, autoestima y crecimiento personal.</p>
       </div>
 
-      <div class="service-card bg-white border border-gray-100 rounded-3xl p-8">
-        <h3 class="text-2xl font-semibold lang-es">Terapia de Pareja</h3>
-        <h3 class="text-2xl font-semibold lang-en" style="display: none;">Couples Therapy</h3>
-        <p class="mt-3 text-gray-600 lang-es">Mejorar la comunicación y fortalecer la conexión emocional.</p>
-        <p class="mt-3 text-gray-600 lang-en" style="display: none;">Improve communication and strengthen emotional connection.</p>
+      <div class="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold" data-i18n="service_2_title">Terapia de Pareja</h3>
+        <p class="mt-3 text-gray-600" data-i18n="service_2_desc">Mejorar la comunicación y fortalecer la conexión emocional.</p>
       </div>
 
-      <div class="service-card bg-white border border-gray-100 rounded-3xl p-8">
-        <h3 class="text-2xl font-semibold lang-es">Adolescentes</h3>
-        <h3 class="text-2xl font-semibold lang-en" style="display: none;">For Adolescents</h3>
-        <p class="mt-3 text-gray-600 lang-es">Acompañamiento en esta etapa de cambios y descubrimiento.</p>
-        <p class="mt-3 text-gray-600 lang-en" style="display: none;">Support and guidance during this stage of change and self-discovery.</p>
+      <div class="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold" data-i18n="service_3_title">Adolescentes</h3>
+        <p class="mt-3 text-gray-600" data-i18n="service_3_desc">Acompañamiento en esta etapa de cambios y descubrimiento.</p>
       </div>
 
-      <div class="service-card bg-white border border-gray-100 rounded-3xl p-8">
-        <h3 class="text-2xl font-semibold lang-es">Orientación Vocacional</h3>
-        <h3 class="text-2xl font-semibold lang-en" style="display: none;">Vocational Guidance</h3>
-        <p class="mt-3 text-gray-600 lang-es">Descubre tu propósito profesional con claridad y confianza.</p>
-        <p class="mt-3 text-gray-600 lang-en" style="display: none;">Discover your professional purpose with clarity and confidence.</p>
+      <div class="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold" data-i18n="service_4_title">Orientación Vocacional</h3>
+        <p class="mt-3 text-gray-600" data-i18n="service_4_desc">Descubre tu propósito profesional con claridad y confianza.</p>
       </div>
 
-      <div class="service-card bg-white border border-gray-100 rounded-3xl p-8">
-        <h3 class="text-2xl font-semibold lang-es">Psicología Organizacional</h3>
-        <h3 class="text-2xl font-semibold lang-en" style="display: none;">Organizational Psychology</h3>
-        <p class="mt-3 text-gray-600 lang-es">Bienestar laboral, liderazgo y desarrollo de equipos.</p>
-        <p class="mt-3 text-gray-600 lang-en" style="display: none;">Workplace well-being, leadership, and team development.</p>
+      <div class="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold" data-i18n="service_5_title">Psicología Organizacional</h3>
+        <p class="mt-3 text-gray-600" data-i18n="service_5_desc">Bienestar laboral, liderazgo y desarrollo de equipos.</p>
       </div>
 
-      <div class="service-card bg-white border border-gray-100 rounded-3xl p-8">
-        <h3 class="text-2xl font-semibold lang-es">Psicología Educativa</h3>
-        <h3 class="text-2xl font-semibold lang-en" style="display: none;">Educational Psychology</h3>
-        <p class="mt-3 text-gray-600 lang-es">Apoyo a estudiantes, padres y docentes.</p>
-        <p class="mt-3 text-gray-600 lang-en" style="display: none;">Support for students, parents, and educators.</p>
+      <div class="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold" data-i18n="service_6_title">Psicología Educativa</h3>
+        <p class="mt-3 text-gray-600" data-i18n="service_6_desc">Apoyo a estudiantes, padres y docentes.</p>
       </div>
     </div>
 
-    <p class="text-center mt-12 text-gray-600 lang-es">
-      Los precios se definen según cada caso.<br>
-      ¡Escríbeme por WhatsApp o usa el formulario!
-    </p>
-    <p class="text-center mt-12 text-gray-600 lang-en" style="display: none;">
-      Prices are determined on a case-by-case basis.<br>
-      Message me on WhatsApp or use the form below!
+    <p class="text-center mt-12 text-gray-500" data-i18n="services_note">
+      Los precios se definen según cada caso.<br>¡Escríbeme por WhatsApp o usa el formulario!
     </p>
   </section>
 
-  <!-- CTA Section -->
+  <!-- Quick Contacto -->
   <section id="contacto" class="bg-emerald-700 text-white py-20">
     <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="heading text-4xl font-bold lang-es">¿Lista para tu abrazo interior?</h2>
-      <h2 class="heading text-4xl font-bold lang-en" style="display: none;">Ready for your inner embrace?</h2>
-      
-      <p class="mt-6 text-xl max-w-md mx-auto lang-es">Contáctame por WhatsApp o correo. Te responderé en menos de 24 horas.</p>
-      <p class="mt-6 text-xl max-w-md mx-auto lang-en" style="display: none;">Contact me via WhatsApp or email. I'll respond within 24 hours.</p>
-      
-      <div class="mt-12 flex flex-col md:flex-row gap-6 justify-center items-center">
-        <a href="https://wa.me/59177268060?text=Hola%20Ivy%2C%20quiero%20agendar%20una%20cita" 
-           target="_blank"
-           class="lang-es bg-white text-emerald-700 hover:bg-emerald-100 w-full md:w-auto px-10 py-5 rounded-3xl text-xl flex items-center justify-center gap-4 font-medium transition">
-          <i class="fab fa-whatsapp text-3xl"></i>
-          <span>+591 77268060</span>
-        </a>
-        
-        <a href="https://wa.me/59177268060?text=Hello%20Ivy%2C%20I%20would%20like%20to%20schedule%20an%20appointment" 
-           target="_blank"
-           class="lang-en bg-white text-emerald-700 hover:bg-emerald-100 w-full md:w-auto px-10 py-5 rounded-3xl text-xl flex items-center justify-center gap-4 font-medium transition" style="display: none;">
-          <i class="fab fa-whatsapp text-3xl"></i>
+      <h2 class="heading text-4xl font-bold" data-i18n="cta_title">¿Lista para tu abrazo interior?</h2>
+      <p class="mt-6 text-xl max-w-md mx-auto" data-i18n="cta_subtitle">
+        Contáctame por WhatsApp o correo. Te responderé en menos de 24 horas.
+      </p>
+
+      <div class="mt-12 flex flex-col md:flex-row gap-8 justify-center items-center">
+        <a href="https://wa.me/59177268060?text=Hola%20Ivy%2C%20quiero%20agendar%20una%20cita" target="_blank"
+           class="bg-white text-emerald-700 hover:bg-emerald-100 w-full md:w-auto px-12 py-6 rounded-3xl text-2xl flex items-center justify-center gap-4 font-medium transition">
+          <i class="fab fa-whatsapp text-4xl"></i>
           <span>+591 77268060</span>
         </a>
 
         <div class="text-left">
           <p class="flex items-center gap-3 text-xl">
-            <i class="fas fa-envelope"></i> 
-            <span>ivymonje.psicologia@gmail.com</span>
+            <i class="fas fa-envelope"></i> ivymonje.psicologia@gmail.com
           </p>
+          <div class="mt-6 flex gap-6 justify-center md:justify-start">
+            <a href="https://instagram.com/abrazointeriorpsicologia" target="_blank" class="text-3xl hover:text-emerald-200">📸</a>
+            <a href="https://www.facebook.com/share/18T7Ue83Zb/" target="_blank" class="text-3xl hover:text-emerald-200">📘</a>
+          </div>
         </div>
       </div>
     </div>
@@ -320,98 +234,55 @@
   <!-- Contact Form -->
   <section id="formulario" class="max-w-6xl mx-auto px-6 py-20 bg-white">
     <div class="max-w-2xl mx-auto">
-      <h2 class="heading text-4xl font-bold text-center mb-4 lang-es">Envíame un mensaje</h2>
-      <h2 class="heading text-4xl font-bold text-center mb-4 lang-en" style="display: none;">Send me a message</h2>
-      
-      <p class="text-center text-gray-600 mb-10 lang-es">Completa el formulario y te responderé lo antes posible.</p>
-      <p class="text-center text-gray-600 mb-10 lang-en" style="display: none;">Fill out the form and I'll get back to you as soon as possible.</p>
+      <h2 class="heading text-4xl font-bold text-center mb-8" data-i18n="form_title">Envíame un mensaje</h2>
+      <p class="text-center text-gray-600 mb-10" data-i18n="form_subtitle">Completa el formulario y te responderé lo antes posible.</p>
 
-      <!-- Form -->
-      <form action="https://formspree.io/f/mdapragb" method="POST" class="space-y-6">
-        
-        <div class="grid md:grid-cols-2 gap-6">
-          <!-- Name -->
-          <div>
-            <label class="block text-sm font-medium mb-1.5 lang-es">Nombre completo</label>
-            <label class="block text-sm font-medium mb-1.5 lang-en" style="display: none;">Full name</label>
-            <input type="text" name="nombre" required 
-                   class="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:border-emerald-600">
-          </div>
-
-          <!-- Email -->
-          <div>
-            <label class="block text-sm font-medium mb-1.5 lang-es">Correo electrónico</label>
-            <label class="block text-sm font-medium mb-1.5 lang-en" style="display: none;">Email address</label>
-            <input type="email" name="email" required 
-                   class="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:border-emerald-600">
-          </div>
+      <form name="contacto" method="POST" action="https://formspree.io/f/mdapragb" class="space-y-6">
+        <div>
+          <label for="nombre" class="block text-sm font-medium mb-1" data-i18n="form_name_label">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:border-emerald-600">
         </div>
 
         <div class="grid md:grid-cols-2 gap-6">
-          <!-- Phone -->
           <div>
-            <label class="block text-sm font-medium mb-1.5 lang-es">Número de WhatsApp / Teléfono</label>
-            <label class="block text-sm font-medium mb-1.5 lang-en" style="display: none;">WhatsApp / Phone number</label>
-            <input type="tel" name="telefono" 
-                   class="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:border-emerald-600">
+            <label for="email" class="block text-sm font-medium mb-1" data-i18n="form_email_label">Correo electrónico</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:border-emerald-600">
           </div>
-
-          <!-- Service Type -->
           <div>
-            <label class="block text-sm font-medium mb-1.5 lang-es">Tipo de servicio</label>
-            <label class="block text-sm font-medium mb-1.5 lang-en" style="display: none;">Type of service</label>
-            <select name="servicio" class="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:border-emerald-600">
-              <option value="" class="lang-es">Selecciona una opción...</option>
-              <option value="" class="lang-en" style="display: none;">Select an option...</option>
-              
-              <option value="Terapia Individual" class="lang-es">Terapia Individual</option>
-              <option value="Individual Therapy" class="lang-en" style="display: none;">Individual Therapy</option>
-              
-              <option value="Terapia de Pareja" class="lang-es">Terapia de Pareja</option>
-              <option value="Couples Therapy" class="lang-en" style="display: none;">Couples Therapy</option>
-              
-              <option value="Adolescentes" class="lang-es">Adolescentes</option>
-              <option value="Adolescents" class="lang-en" style="display: none;">Adolescents</option>
-              
-              <option value="Orientación Vocacional" class="lang-es">Orientación Vocacional</option>
-              <option value="Vocational Guidance" class="lang-en" style="display: none;">Vocational Guidance</option>
-              
-              <option value="Psicología Organizacional" class="lang-es">Psicología Organizacional</option>
-              <option value="Organizational Psychology" class="lang-en" style="display: none;">Organizational Psychology</option>
-              
-              <option value="Psicología Educativa" class="lang-es">Psicología Educativa</option>
-              <option value="Educational Psychology" class="lang-en" style="display: none;">Educational Psychology</option>
-              
-              <option value="Otro" class="lang-es">Otro</option>
-              <option value="Other" class="lang-en" style="display: none;">Other</option>
-            </select>
+            <label for="telefono" class="block text-sm font-medium mb-1" data-i18n="form_phone_label">Número de WhatsApp / Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:border-emerald-600">
           </div>
         </div>
 
-        <!-- Preferred times -->
         <div>
-          <label class="block text-sm font-medium mb-1.5 lang-es">Días y horarios preferidos</label>
-          <label class="block text-sm font-medium mb-1.5 lang-en" style="display: none;">Preferred days and times</label>
-          <textarea name="horarios" rows="2" placeholder="Ej: Martes o jueves por la tarde"
-                    class="lang-es w-full px-4 py-3 border border-gray-300 rounded-2xl focus:border-emerald-600"></textarea>
-          <textarea name="horarios" rows="2" placeholder="E.g., Tuesdays or Thursdays in the afternoon"
-                    class="lang-en w-full px-4 py-3 border border-gray-300 rounded-2xl focus:border-emerald-600" style="display: none;"></textarea>
+          <label for="servicio" class="block text-sm font-medium mb-1" data-i18n="form_service_label">Tipo de servicio</label>
+          <select id="servicio" name="servicio" class="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:border-emerald-600">
+            <option value="" data-i18n="form_service_placeholder">Selecciona una opción...</option>
+            <option value="Terapia Individual" data-i18n="form_service_1">Terapia Individual</option>
+            <option value="Terapia de Pareja" data-i18n="form_service_2">Terapia de Pareja</option>
+            <option value="Adolescentes" data-i18n="form_service_3">Adolescentes</option>
+            <option value="Orientación Vocacional" data-i18n="form_service_4">Orientación Vocacional</option>
+            <option value="Psicología Organizacional" data-i18n="form_service_5">Psicología Organizacional</option>
+            <option value="Psicología Educativa" data-i18n="form_service_6">Psicología Educativa</option>
+            <option value="Otro" data-i18n="form_service_7">Otro</option>
+          </select>
         </div>
 
-        <!-- Message -->
         <div>
-          <label class="block text-sm font-medium mb-1.5 lang-es">Mensaje / Motivo de consulta</label>
-          <label class="block text-sm font-medium mb-1.5 lang-en" style="display: none;">Message / Reason for consultation</label>
-          <textarea name="mensaje" rows="5" required placeholder="Cuéntame brevemente cómo puedo ayudarte"
-                    class="lang-es w-full px-4 py-3 border border-gray-300 rounded-2xl focus:border-emerald-600"></textarea>
-          <textarea name="mensaje" rows="5" required placeholder="Briefly tell me how I can help you"
-                    class="lang-en w-full px-4 py-3 border border-gray-300 rounded-2xl focus:border-emerald-600" style="display: none;"></textarea>
+          <label for="horarios" class="block text-sm font-medium mb-1" data-i18n="form_schedule_label">Días y horarios preferidos</label>
+          <textarea id="horarios" name="horarios" rows="2" class="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:border-emerald-600"
+                    placeholder="Ej: Martes o jueves por la tarde" data-i18n-placeholder="form_schedule_placeholder"></textarea>
         </div>
 
-        <button type="submit" 
-                class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-5 text-xl font-medium rounded-3xl transition flex items-center justify-center gap-2">
-          <span class="lang-es">Enviar mensaje</span>
-          <span class="lang-en" style="display: none;">Send message</span>
+        <div>
+          <label for="mensaje" class="block text-sm font-medium mb-1" data-i18n="form_message_label">Mensaje / Motivo de consulta</label>
+          <textarea id="mensaje" name="mensaje" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:border-emerald-600"
+                    placeholder="Cuéntame brevemente cómo puedo ayudarte" data-i18n-placeholder="form_message_placeholder"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-5 text-xl font-medium rounded-3xl transition"
+                data-i18n="form_submit">
+          Enviar mensaje
         </button>
       </form>
     </div>
@@ -420,109 +291,181 @@
   <!-- Footer -->
   <footer class="bg-white py-10 border-t text-center text-gray-500 text-sm">
     <p>© 2026 Abrazo Interior Psicología • La Paz, Bolivia</p>
-    <p class="mt-2">Ivy Victoria Monje Riera • Licenciada en Psicología</p>
+    <p class="mt-2 flex flex-wrap justify-center gap-x-6">
+      <span>Ivy Victoria Monje Riera • Licenciada en Psicología</span>
+      <a href="/privacidad.html" class="hover:text-emerald-600 hover:underline">Política de Privacidad</a>
+    </p>
   </footer>
 
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/59177268060?text=Hola%20Ivy%2C%20quiero%20agendar%20una%20cita" 
-     target="_blank"
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/59177268060?text=Hola%20Ivy%2C%20quiero%20agendar%20una%20cita" target="_blank"
      class="fixed bottom-8 right-8 bg-emerald-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl text-4xl hover:scale-110 transition z-50"
      aria-label="Contactar por WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Language + WhatsApp Update Script -->
+  <!-- Language Toggle + Translations Script -->
   <script>
-    let currentLang = 'es';
+    // Translations object
+    const translations = {
+      es: {
+        hero_title: "Abrazo Interior<br>Psicología",
+        hero_subtitle: "Terapia cognitivo conductual humanista",
+        hero_tagline: "Conéctate contigo, con tus relaciones y con tu propósito.",
+        hero_cta_whatsapp: "Agenda tu cita por WhatsApp",
+        hero_cta_form: "Enviar mensaje",
 
-    function getInitialLang() {
-      const saved = localStorage.getItem('preferredLang');
-      if (saved === 'en' || saved === 'es') return saved;
-      
-      const browserLang = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
-      return browserLang.startsWith('en') ? 'en' : 'es';
-    }
+        about_title: "Hola, soy Ivy Monje",
+        about_p1: "Psicóloga de profesión de la Universidad Católica Boliviana San Pablo con enfoque cognitivo conductual humanista. Me especializo en psicología organizacional, recursos humanos y psicología educativa. Acompaño a personas e instituciones en procesos de sanación, crecimiento y transformación interior.",
+        about_p2: "Mi práctica se basa en el respeto profundo por cada historia y en la convicción de que un abrazo interior es el primer paso para sanar y florecer.",
 
-    function applyLanguage(lang) {
+        services_title: "Servicios",
+        service_1_title: "Terapia Individual",
+        service_1_desc: "Para ansiedad, depresión, autoestima y crecimiento personal.",
+        service_2_title: "Terapia de Pareja",
+        service_2_desc: "Mejorar la comunicación y fortalecer la conexión emocional.",
+        service_3_title: "Adolescentes",
+        service_3_desc: "Acompañamiento en esta etapa de cambios y descubrimiento.",
+        service_4_title: "Orientación Vocacional",
+        service_4_desc: "Descubre tu propósito profesional con claridad y confianza.",
+        service_5_title: "Psicología Organizacional",
+        service_5_desc: "Bienestar laboral, liderazgo y desarrollo de equipos.",
+        service_6_title: "Psicología Educativa",
+        service_6_desc: "Apoyo a estudiantes, padres y docentes.",
+        services_note: "Los precios se definen según cada caso.<br>¡Escríbeme por WhatsApp o usa el formulario!",
+
+        cta_title: "¿Lista para tu abrazo interior?",
+        cta_subtitle: "Contáctame por WhatsApp o correo. Te responderé en menos de 24 horas.",
+
+        form_title: "Envíame un mensaje",
+        form_subtitle: "Completa el formulario y te responderé lo antes posible.",
+        form_name_label: "Nombre completo",
+        form_email_label: "Correo electrónico",
+        form_phone_label: "Número de WhatsApp / Teléfono",
+        form_service_label: "Tipo de servicio",
+        form_service_placeholder: "Selecciona una opción...",
+        form_service_1: "Terapia Individual",
+        form_service_2: "Terapia de Pareja",
+        form_service_3: "Adolescentes",
+        form_service_4: "Orientación Vocacional",
+        form_service_5: "Psicología Organizacional",
+        form_service_6: "Psicología Educativa",
+        form_service_7: "Otro",
+        form_schedule_label: "Días y horarios preferidos",
+        form_schedule_placeholder: "Ej: Martes o jueves por la tarde",
+        form_message_label: "Mensaje / Motivo de consulta",
+        form_message_placeholder: "Cuéntame brevemente cómo puedo ayudarte",
+        form_submit: "Enviar mensaje"
+      },
+      en: {
+        hero_title: "Abrazo Interior<br>Psychology",
+        hero_subtitle: "Humanistic Cognitive Behavioral Therapy",
+        hero_tagline: "Connect with yourself, with your relationships, and with your purpose.",
+        hero_cta_whatsapp: "Schedule via WhatsApp",
+        hero_cta_form: "Send message",
+
+        about_title: "Hello, I'm Ivy Monje",
+        about_p1: "I am a psychologist by profession from Universidad Católica Boliviana San Pablo with a humanistic cognitive-behavioral approach. I specialize in organizational psychology, human resources, and educational psychology. I accompany individuals and institutions in processes of healing, growth, and inner transformation.",
+        about_p2: "My practice is based on deep respect for each person's unique story and the conviction that an inner embrace is the first step to heal and flourish.",
+
+        services_title: "Services",
+        service_1_title: "Individual Therapy",
+        service_1_desc: "For anxiety, depression, self-esteem, and personal growth.",
+        service_2_title: "Couples Therapy",
+        service_2_desc: "Improve communication and strengthen emotional connection.",
+        service_3_title: "For Adolescents",
+        service_3_desc: "Support during this stage of change and self-discovery.",
+        service_4_title: "Vocational Guidance",
+        service_4_desc: "Discover your professional purpose with clarity and confidence.",
+        service_5_title: "Organizational Psychology",
+        service_5_desc: "Workplace well-being, leadership, and team development.",
+        service_6_title: "Educational Psychology",
+        service_6_desc: "Support for students, parents, and educators.",
+        services_note: "Prices are determined on a case-by-case basis.<br>Message me on WhatsApp or use the form!",
+
+        cta_title: "Ready for your inner embrace?",
+        cta_subtitle: "Contact me via WhatsApp or email. I'll respond within 24 hours.",
+
+        form_title: "Send me a message",
+        form_subtitle: "Fill out the form and I'll get back to you as soon as possible.",
+        form_name_label: "Full name",
+        form_email_label: "Email address",
+        form_phone_label: "WhatsApp / Phone number",
+        form_service_label: "Type of service",
+        form_service_placeholder: "Select an option...",
+        form_service_1: "Individual Therapy",
+        form_service_2: "Couples Therapy",
+        form_service_3: "Adolescents",
+        form_service_4: "Vocational Guidance",
+        form_service_5: "Organizational Psychology",
+        form_service_6: "Educational Psychology",
+        form_service_7: "Other",
+        form_schedule_label: "Preferred days and times",
+        form_schedule_placeholder: "E.g., Tuesdays or Thursdays in the afternoon",
+        form_message_label: "Message / Reason for consultation",
+        form_message_placeholder: "Briefly tell me how I can help you",
+        form_submit: "Send message"
+      }
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'es';
+
+    function switchLanguage(lang) {
       currentLang = lang;
-      localStorage.setItem('preferredLang', lang);
+      localStorage.setItem('lang', lang);
 
-      // Toggle all language elements
-      document.querySelectorAll('.lang-es').forEach(el => {
-        el.style.display = (lang === 'es') ? '' : 'none';
+      // Update all elements with data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
       });
-      document.querySelectorAll('.lang-en').forEach(el => {
-        el.style.display = (lang === 'en') ? '' : 'none';
+
+      // Update placeholders
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (translations[lang] && translations[lang][key]) {
+          el.placeholder = translations[lang][key];
+        }
       });
 
       // Update active button styles
-      const esBtn = document.getElementById('lang-es-btn');
-      const enBtn = document.getElementById('lang-en-btn');
-      
-      if (esBtn && enBtn) {
-        if (lang === 'es') {
-          esBtn.classList.add('active', 'bg-emerald-700', 'text-white');
-          enBtn.classList.remove('active', 'bg-emerald-700', 'text-white');
-        } else {
-          enBtn.classList.add('active', 'bg-emerald-700', 'text-white');
-          esBtn.classList.remove('active', 'bg-emerald-700', 'text-white');
-        }
-      }
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
 
-      // Update HTML lang attribute
+      // Update html lang attribute
       document.documentElement.lang = lang;
+    }
 
-      // Update page title
-      if (lang === 'en') {
-        document.title = 'Abrazo Interior Psychology | Ivy Monje - Therapy in La Paz, Bolivia';
-      } else {
-        document.title = 'Abrazo Interior Psicología | Ivy Monje - Terapia en La Paz, Bolivia';
+    // Initialize language on page load
+    function initLanguage() {
+      // Apply saved or default language
+      document.getElementById('btn-es').classList.toggle('active', currentLang === 'es');
+      document.getElementById('btn-en').classList.toggle('active', currentLang === 'en');
+
+      // Apply translations if English is selected
+      if (currentLang === 'en') {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations.en[key]) {
+            el.innerHTML = translations.en[key];
+          }
+        });
+
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          if (translations.en[key]) {
+            el.placeholder = translations.en[key];
+          }
+        });
       }
 
-      // Update WhatsApp links with appropriate prefilled text
-      updateWhatsAppPrefill(lang);
+      document.documentElement.lang = currentLang;
     }
 
-    function updateWhatsAppPrefill(lang) {
-      const waLinks = document.querySelectorAll('a[href*="wa.me/59177268060"]');
-      const esText = 'Hola%20Ivy%2C%20quiero%20agendar%20una%20cita';
-      const enText = 'Hello%20Ivy%2C%20I%20would%20like%20to%20schedule%20an%20appointment';
-
-      waLinks.forEach(link => {
-        if (lang === 'en') {
-          link.href = link.href.replace(/text=[^&]*/, `text=${enText}`);
-        } else {
-          link.href = link.href.replace(/text=[^&]*/, `text=${esText}`);
-        }
-      });
-    }
-
-    function switchLang(lang) {
-      applyLanguage(lang);
-    }
-
-    // Initialize on page load
-    document.addEventListener('DOMContentLoaded', () => {
-      const initialLang = getInitialLang();
-      applyLanguage(initialLang);
-
-      // Make sure the correct WhatsApp prefill is set on load
-      updateWhatsAppPrefill(initialLang);
-
-      // Optional: subtle first-visit language notice (can be removed)
-      // if (!localStorage.getItem('preferredLang') && initialLang === 'en') {
-      //   console.log('%c[Language] Auto-detected English from browser settings', 'color:#666');
-      // }
-    });
-
-    // Allow keyboard access to language buttons
-    document.addEventListener('keydown', function(e) {
-      if (e.key === '/' && document.activeElement.tagName === 'BODY') {
-        e.preventDefault();
-        const current = localStorage.getItem('preferredLang') || 'es';
-        switchLang(current === 'es' ? 'en' : 'es');
-      }
-    });
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', initLanguage);
   </script>
 
 </body>
