@@ -73,20 +73,20 @@
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex gap-8 text-lg">
-        <a href="#inicio" class="hover:text-emerald-600 transition">Inicio</a>
-        <a href="#sobre" class="hover:text-emerald-600 transition">Sobre mí</a>
-        <a href="#servicios" class="hover:text-emerald-600 transition">Servicios</a>
-        <a href="#contacto" class="hover:text-emerald-600 transition">Contacto</a>
+        <a href="#inicio" class="hover:text-emerald-600 transition" data-i18n="nav_home">Inicio</a>
+        <a href="#sobre" class="hover:text-emerald-600 transition" data-i18n="nav_about">Sobre mí</a>
+        <a href="#servicios" class="hover:text-emerald-600 transition" data-i18n="nav_services">Servicios</a>
+        <a href="#contacto" class="hover:text-emerald-600 transition" data-i18n="nav_contact">Contacto</a>
       </div>
 
       <!-- Language Toggle + WhatsApp -->
       <div class="flex items-center gap-3">
         <!-- Language Switcher -->
-        <div class="flex items-center bg-gray-100 rounded-full p-1 text-sm">
+        <div class="flex items-center border border-gray-200 rounded-full p-1 text-sm font-medium">
           <button onclick="switchLanguage('es')" id="btn-es"
-                  class="lang-btn active px-3 py-1">ES</button>
+                  class="px-3 py-1 rounded-full hover:bg-gray-100 transition">ES</button>
           <button onclick="switchLanguage('en')" id="btn-en"
-                  class="lang-btn px-3 py-1">EN</button>
+                  class="px-3 py-1 rounded-full bg-emerald-600 text-white transition">EN</button>
         </div>
 
         <a href="https://wa.me/59177268060" target="_blank"
@@ -355,8 +355,68 @@
         form_schedule_placeholder: "Ej: Martes o jueves por la tarde",
         form_message_label: "Mensaje / Motivo de consulta",
         form_message_placeholder: "Cuéntame brevemente cómo puedo ayudarte",
-        form_submit: "Enviar mensaje"
+        form_submit: "Enviar mensaje",
+
+        nav_home: "Inicio",
+        nav_about: "Sobre mí",
+        nav_services: "Servicios",
+        nav_contact: "Contacto"
       },
+      en: {
+        hero_title: "Abrazo Interior<br>Psychology",
+        hero_subtitle: "Humanistic Cognitive Behavioral Therapy",
+        hero_tagline: "Connect with yourself, with your relationships, and with your purpose.",
+        hero_cta_whatsapp: "Schedule via WhatsApp",
+        hero_cta_form: "Send message",
+
+        about_title: "Hello, I'm Ivy Monje",
+        about_p1: "I am a psychologist by profession from Universidad Católica Boliviana San Pablo with a humanistic cognitive-behavioral approach. I specialize in organizational psychology, human resources, and educational psychology. I accompany individuals and institutions in processes of healing, growth, and inner transformation.",
+        about_p2: "My practice is based on deep respect for each person's unique story and the conviction that an inner embrace is the first step to heal and flourish.",
+
+        services_title: "Services",
+        service_1_title: "Individual Therapy",
+        service_1_desc: "For anxiety, depression, self-esteem, and personal growth.",
+        service_2_title: "Couples Therapy",
+        service_2_desc: "Improve communication and strengthen emotional connection.",
+        service_3_title: "For Adolescents",
+        service_3_desc: "Support during this stage of change and self-discovery.",
+        service_4_title: "Vocational Guidance",
+        service_4_desc: "Discover your professional purpose with clarity and confidence.",
+        service_5_title: "Organizational Psychology",
+        service_5_desc: "Workplace well-being, leadership, and team development.",
+        service_6_title: "Educational Psychology",
+        service_6_desc: "Support for students, parents, and educators.",
+        services_note: "Prices are determined on a case-by-case basis.<br>Message me on WhatsApp or use the form!",
+
+        cta_title: "Ready for your inner embrace?",
+        cta_subtitle: "Contact me via WhatsApp or email. I'll respond within 24 hours.",
+
+        form_title: "Send me a message",
+        form_subtitle: "Fill out the form and I'll get back to you as soon as possible.",
+        form_name_label: "Full name",
+        form_email_label: "Email address",
+        form_phone_label: "WhatsApp / Phone number",
+        form_service_label: "Type of service",
+        form_service_placeholder: "Select an option...",
+        form_service_1: "Individual Therapy",
+        form_service_2: "Couples Therapy",
+        form_service_3: "Adolescents",
+        form_service_4: "Vocational Guidance",
+        form_service_5: "Organizational Psychology",
+        form_service_6: "Educational Psychology",
+        form_service_7: "Other",
+        form_schedule_label: "Preferred days and times",
+        form_schedule_placeholder: "E.g., Tuesdays or Thursdays in the afternoon",
+        form_message_label: "Message / Reason for consultation",
+        form_message_placeholder: "Briefly tell me how I can help you",
+        form_submit: "Send message",
+
+        nav_home: "Home",
+        nav_about: "About me",
+        nav_services: "Services",
+        nav_contact: "Contact"
+      }
+    };
       en: {
         hero_title: "Abrazo Interior<br>Psychology",
         hero_subtitle: "Humanistic Cognitive Behavioral Therapy",
@@ -431,8 +491,17 @@
       });
 
       // Update active button styles
-      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
-      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      const esBtn = document.getElementById('btn-es');
+      const enBtn = document.getElementById('btn-en');
+      if (esBtn && enBtn) {
+        if (lang === 'es') {
+          esBtn.classList.remove('bg-emerald-600', 'text-white');
+          enBtn.classList.add('bg-emerald-600', 'text-white');
+        } else {
+          enBtn.classList.remove('bg-emerald-600', 'text-white');
+          esBtn.classList.add('bg-emerald-600', 'text-white');
+        }
+      }
 
       // Update html lang attribute
       document.documentElement.lang = lang;
